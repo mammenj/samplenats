@@ -9,7 +9,7 @@ import (
 func main() {
 
 	nc, _ := nats.Connect(nats.DefaultURL)
-	ec, _ := nats.NewEncodedConn(nc, nats.JSON_ENCODER)
+	ec, _ := nats.NewEncodedConn(nc, nats.DEFAULT_ENCODER)
 	defer ec.Close()
 
 	recvCh := make(chan string)
